@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "python-exec",
+            "type": "shell",
+            "command": "/opt/anaconda3/envs/learning-deep-learning/bin/python",
+            "args": [
+                "${file}",
+                "-d",
+                "${workspaceFolder}/keras_tuto/animals",
+                "-p",
+                "${workspaceFolder}/keras_tuto/output/simple_nn_plot.png",
+                "-m",
+                "${workspaceFolder}/keras_tuto/output/simple_nn.model",
+                "-l",
+                "${workspaceFolder}/keras_tuto/output/simple_nn_lb.pickle"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+
+// ap.add_argument(
+//     "-m", "--model", required=True, help="path to output trained model"
+// )
+// ap.add_argument(
+//     "-l", "--label-bin", required=True, help="path to output label binarizer"
+// )
+// ap.add_argument(
+//     "-p", "--plot", requ
