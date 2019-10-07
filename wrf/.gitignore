@@ -1,0 +1,6 @@
+**
+!*.md
+!wrfout_*
+!geo_*
+!namelist*
+!.gitignore
