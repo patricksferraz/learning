@@ -1,0 +1,72 @@
+# Roteiro
+
+* O que é o git
+	- Controle de versão de arquivos
+		- local
+		- centralizado
+		- distribuído
+	- Verificação via checksum (hash)
+	- Tudo é reversível
+	- Três estados
+		- Consolidado (committed)
+		- Modificado (modified)
+		- Preparado (staged)
+* Instalação do git
+* Configuração inicial do git
+	- git config --global user.name "SeuNome"
+	- git config --global user.email seuemail
+* Obter ajuda
+	- git <verb> --help
+* Github
+* Branch
+	- HEAD ponteiro atual
+	- master ponteiro principal
+* Comandos
+	- git init			# inicializa repositório
+	- git clone URL			# clona um repositório
+	- git status			# status dos arquivos
+	- git add "nomearq"		# monitorando arquivo
+	- git reset "nomearq"		# retira da área de seleção
+		- [hash] desfaz commits até hash informado
+		- [HEAD~1] desfaz último commit
+		- [--hard] [HEAD~1] desfaz commit e desfaz as alterações nos arquivos
+	- git revert hash		# reverte o commit indicado pelo hash
+	- git reset --hard HEAD^	# Revert o revert
+		- git checkout HEAD^^ --
+	- cat .gitignore		# indica arquivos a serem ignorados
+	- git diff [--cached]		# compara diretorio-area selecao/ area selecao-ultimo commit
+	- git commit			# realiza o commit
+		- [--amend] novo commit substituindo anterior
+	- git rm "nomearq"		# remove arquivo e deixa de monitorar
+	- git mv "nori" "ndes"		# move/renomeia arquivos
+	- git log			# exibi os commits
+		- [-p] com diff
+		- [--stat] resumidos
+		- [--pretty=online] uma linha
+	- git checkout -- "nomearq"	# Desfaz um arquivo modificado
+		- [nome branch] move HEAD para branch informado
+		- [-b] [nome branch] cria nova branch e move HEAD para ela
+	- git remote			# exibi todos remotos
+		- [-v] exibi a URL de todos remotos
+		- [add] [nomecurto] [url] adiciona novo remoto
+	- git fetch "nome-remoto"	# pega todos arquivos que não possui localmente
+	- git merge "nome-branch"	# mescla a branch atual com a "nome-branch"
+	- git pull "nome-remoto"	# realiza o fetch e o merge automaticamente de um branch remoto para o seu atual
+	- git push "remoto" [branch]	# envia para o remoto (atenção a colaboratividade)
+	- git remote show "remoto"	# inspeciona um remoto
+		- [rename] [nomeatual] [novonome] renomeia um remoto
+		- [rm] [nomeremoto] remove um remoto
+	- git branch			# exibi todas branch
+		- [nome-branch] cria nova branch
+		- [-d] [nomebrach] apaga uma branch
+		- [-v] exibi utimo commit de cada branch
+		- [--merged] exibi quais branchs já foram mescladas na atual
+		- [--no-merged] exibi todas branchs que não foram mescladas
+		- [-D] força remoção de uma branch não mesclada
+		*- Branchs remotos possui nomenclatura (remote)/(branch)
+	- git rebase master
+		*- rebase "adiciona o commit" a frente do branch master (confuso)
+		*- não recomendado para repositórios públicos
+		*- necessário realizar um merger
+* Pseudonimos no git
+	- git config --global alias.[nome do alias] [nome do comando]
