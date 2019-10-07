@@ -1,0 +1,61 @@
+ping
+
+Comando que verifica a conectividade fim-a-fim e outros parâmetros, como: jitter e perda de pacotes. Útil para verificar a disponibilidade de algum ativo de rede.
+
+/usr/sbin/traceroute
+
+Comando que mostra o caminho percorrido por um pacote para chegar ao seu destino. Este comando mostra na tela o caminho percorrido entre os Gateways da rede e o tempo gasto de 
+retransmissão. É útil para encontrar ativos defeituosos na rede caso o pacote não esteja chegando ao seu destino.
+
+nc | netcat
+
+O Netcat é uma ferramenta de rede que permite abrir portas TCP/UDP. Permite forçar conexões UDP/TCP. Util para realizar rastreamento de portas ou realizar transferências de arquivos 
+bit a bit entre os equipamentos. Um verdadeiro canivete suíço de rede TCP/IP. Útil para solucionar problemas de políticas de firewall e disponibilidade do serviço.
+
+netstat
+
+Exibi todas conexões
+
+/usr/sbin/tcpdump
+
+Utilitário que monitora a conexão TCP/IP. O monitoramento é feito especificando a interface desejada. A saída do comando é o trafego de pacotes enviados e recebido juntamente com 
+endereços de origem e destino. Útil para monitorar todo tráfego que entra e sai da placa de rede (sniffer). A máquina de origem deverá possuir o recurso TCPDUMP instalado, caso não 
+possua, basta instalá-lo conforme sua distro Linux.
+
+iperf
+
+O Iperf consiste em um software de análise de performance de banda e cálculo de perda de datagramas na rede, cria fluxo de dados sob TCP e UDP e permite medir e analisar o desempenho 
+da rede. Ele trabalha no modo cliente/servidor. Útil para testar/medir o throughput da rede, pois serve como ferramenta de simulação de conectividade, diagnóstico da situação do 
+cabeamento, entre outros.
+
+ip
+
+Com o próposito de aproveitar ao máximo o novo subsistema de rede criado, em detrimento de comandos obsoletos (“arp”, “ifconfig” e “route”), uma nova ferramenta foi desenvolvida, “o 
+comando ip”. A principal diferença desse comando é que além de reunir todas as funções dos comandos obsoletos, ele ainda nos oferece muitas outras.
+Em resumo, a funcionalidade fornecida na nova suíte iproute2, simplificou e condensou estas ferramentas no novo “comando ip”.
+
+iptables
+
+O Iptables é uma ferramenta para criar e administrar regras e assim filtrar pacotes de redes (firewall). Pode funcionar baseado no endereço, porta de origem, destino do pacote, 
+prioridade. Ele funciona através da comparação de regras para saber se um pacote tem ou não permissão para passar. Em firewalls mais restritivos, o pacote é bloqueado e registrado para 
+que o administrador do sistema tenha conhecimento sobre o que está acontecendo em seu sistema.
+
+nmap
+
+O comando nmap é um scanner de portas, ou seja, ele mostra quais portas estão abertas no ativo de rede. A máquina de origem deverá possuir o recurso NMAP instalado, caso não possua, 
+basta instalá-lo conforme sua distro Linux.
+
+lynis
+
+Lynis é uma ferramenta de auditoria. Ela examina o sistema e os programas disponíveis para detectar problemas de segurança. Além da informação relacionada com segurança, também 
+mostrará informações gerais sobre pacotes instalados e erros de configuração. A máquina de origem deverá possuir o recurso LYNIS instalado, caso não possua, basta instalá-lo conforme 
+sua distro Linux.
+
+rkhunter
+
+O RKhunter é uma excelente ferramenta para detectar trojans, rootkits e outros possíveis problemas de segurança em servidores linux. A máquina de origem deverá possuir o recurso 
+RKHUNTER instalado, caso não possua, basta instalá-lo conforme sua distro Linux.
+
+/sbin/cryptsetup
+
+Usado para criar e gerenciar partições de disco criptografados.
