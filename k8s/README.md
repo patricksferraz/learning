@@ -1,4 +1,6 @@
-# live-k8s-esqueta-imersao
+# k8s
+
+[source](https://www.youtube.com/watch?v=mnWEKcltpX0)
 
 ## Stress test
 
